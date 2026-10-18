@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "word": "NOTA FISCAL",
+        "category": "consumo",
+        "context": "Uma pessoa compra um produto e recebe um documento que registra a operação comercial.",
+        "hints": [
+            "Está relacionado ao registro de uma compra.",
+            "Pode ser utilizado para comprovar a operação."
+        ],
+        "explanation": "A nota fiscal é um documento que registra uma operação comercial."
+    },
+    {
+        "id": 2,
+        "word": "IMPOSTO",
+        "category": "tributos",
+        "context": "É um tributo cobrado pelo poder público sem que exista uma prestação de serviço específica diretamente vinculada ao pagamento.",
+        "hints": [
+            "É um tipo de tributo.",
+            "Não depende de uma contraprestação direta do Estado."
+        ],
+        "explanation": "Imposto é uma espécie de tributo cuja cobrança não depende de uma contraprestação estatal específica."
+    }
+]

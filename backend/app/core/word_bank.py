@@ -8,9 +8,11 @@ class WordBank:
 
 
 
-
 @dataclass
 class Word:
-
-    word: str = ""
-    description: str= ""
+    id: int
+    word: str
+    category: str
+    context: str
+    hints: list[str]
+    explanation: str
