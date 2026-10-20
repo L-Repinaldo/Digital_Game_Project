@@ -1,11 +1,11 @@
 from flask import Blueprint, jsonify, session, request
+import random
 
 from ..content import load_words, get_word
 from ..core import GameEngine
 
 
 game_router = Blueprint("game", __name__)
-
 
 @game_router.get("/game/")
 def start_game():
@@ -16,7 +16,44 @@ def start_game():
             "error": "Nenhuma palavra disponível."
         }), 404
 
-    completed_word_ids = session.get("completed_word_ids", [])
+    game_state = session.get("game")
+
+    if game_state:
+        word = get_word(game_state["word_id"], word_bank)
+
+        if word is not None:
+            engine = GameEngine(word)
+            engine.guessed_letters = set(
+                game_state["guessed_letters"]
+            )
+            engine.wrong_letters = set(
+                game_state["wrong_letters"]
+            )
+            engine.attempts = game_state["attempts"]
+
+            if not engine.is_finished():
+                return jsonify({
+                    "context": word.context,
+                    "category": word.category,
+                    "masked_word": engine.masked_word(),
+                    "attempts": engine.attempts,
+                    "max_attempts": engine.max_attempts,
+                    "guessed_letters": sorted(
+                        engine.guessed_letters
+                    ),
+                    "wrong_letters": sorted(
+                        engine.wrong_letters
+                    ),
+                    "hints_used": game_state.get(
+                        "hints_used", 0
+                    ),
+                    "hints": word.hints,
+                    "explanation": word.explanation,
+                })
+
+    completed_word_ids = session.get(
+        "completed_word_ids", []
+    )
 
     available_words = [
         word
@@ -25,11 +62,10 @@ def start_game():
     ]
 
     if not available_words:
-        completed_word_ids = []
         session["completed_word_ids"] = []
         available_words = word_bank.words
 
-    word = available_words[0]
+    word = random.choice(available_words)
     engine = GameEngine(word)
 
     session["game"] = {
@@ -39,7 +75,6 @@ def start_game():
         "attempts": engine.max_attempts,
         "hints_used": 0,
     }
-
     session.modified = True
 
     return jsonify({
@@ -54,6 +89,7 @@ def start_game():
         "hints": word.hints,
         "explanation": word.explanation,
     })
+
 
 
 @game_router.post("/game/guess")

@@ -7,7 +7,10 @@ export default function useGame() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [feedback, setFeedback] = useState("");
-  const [hintsUsed, setHintsUsed] = useState(0);
+  const [hintsUsed, setHintsUsed] = useState(() => {
+  const salvo = localStorage.getItem('hintsUsed');
+  return salvo ? JSON.parse(salvo) : 0; 
+  });
   
 
   const loadGame = useCallback(async () => {
@@ -108,7 +111,7 @@ export default function useGame() {
       const result = await consumeHint();
 
       setGame((current) => {
-        if (!current) return current;
+        if (!current) return current;       
 
         return {
           ...current,
