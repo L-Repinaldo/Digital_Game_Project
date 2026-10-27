@@ -20,5 +20,203 @@
             "Não depende de uma contraprestação direta do Estado."
         ],
         "explanation": "Imposto é uma espécie de tributo cuja cobrança não depende de uma contraprestação estatal específica."
+    },
+    {
+        "id": 3,
+        "word": "TRIBUTO",
+        "category": "tributos",
+        "context": "É uma obrigação de pagamento instituída por lei e cobrada pelo Estado, conforme as regras previstas na legislação.",
+        "hints": [
+            "É uma obrigação prevista em lei.",
+            "Impostos, taxas e contribuições são exemplos de suas espécies."
+        ],
+        "explanation": "Tributo é uma prestação pecuniária obrigatória instituída em lei e cobrada mediante atividade administrativa vinculada."
+    },
+    {
+        "id": 4,
+        "word": "TAXA",
+        "category": "tributos",
+        "context": "Uma pessoa paga um valor ao poder público em razão de um serviço público específico e divisível ou do exercício do poder de polícia.",
+        "hints": [
+            "É uma espécie de tributo.",
+            "Pode estar relacionada a um serviço público específico ou ao poder de polícia."
+        ],
+        "explanation": "A taxa é um tributo que pode ser cobrado em razão do exercício regular do poder de polícia ou da utilização efetiva ou potencial de serviço público específico e divisível."
+    },
+    {
+        "id": 5,
+        "word": "IPTU",
+        "category": "tributos",
+        "context": "Uma pessoa é proprietária de uma casa localizada na área urbana de um município e precisa pagar um tributo relacionado a esse imóvel.",
+        "hints": [
+            "Está relacionado a imóveis urbanos.",
+            "É um tributo de competência municipal."
+        ],
+        "explanation": "O Imposto sobre a Propriedade Predial e Territorial Urbana é um imposto municipal que incide sobre a propriedade, o domínio útil ou a posse de imóvel urbano, conforme a legislação aplicável."
+    },
+    {
+        "id": 6,
+        "word": "IPVA",
+        "category": "tributos",
+        "context": "Uma pessoa possui um automóvel e precisa pagar anualmente um imposto relacionado à propriedade desse veículo.",
+        "hints": [
+            "Está relacionado a veículos.",
+            "É um imposto de competência dos estados e do Distrito Federal."
+        ],
+        "explanation": "O Imposto sobre a Propriedade de Veículos Automotores incide sobre a propriedade de veículos automotores, conforme a legislação aplicável."
+    },
+    {
+        "id": 7,
+        "word": "ICMS",
+        "category": "tributos",
+        "context": "Uma empresa comercializa mercadorias e realiza operações que podem envolver um imposto estadual sobre a circulação desses bens.",
+        "hints": [
+            "É um imposto estadual.",
+            "Seu nome menciona circulação de mercadorias e prestação de determinados serviços."
+        ],
+        "explanation": "O Imposto sobre Operações relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação é um imposto de competência dos estados e do Distrito Federal."
+    },
+    {
+        "id": 8,
+        "word": "IRPF",
+        "category": "tributos",
+        "context": "Uma pessoa física recebe rendimentos e precisa verificar se está obrigada a declarar e pagar um imposto federal sobre sua renda.",
+        "hints": [
+            "Está relacionado à renda de pessoas físicas.",
+            "Sua sigla começa com as palavras Imposto de Renda."
+        ],
+        "explanation": "O Imposto sobre a Renda das Pessoas Físicas incide sobre rendimentos tributáveis, observadas as regras, deduções e condições previstas na legislação."
+    },
+    {
+        "id": 9,
+        "word": "ORCAMENTO PUBLICO",
+        "category": "gestão pública",
+        "context": "O governo planeja quanto pretende arrecadar e como os recursos serão destinados a áreas como saúde, educação e segurança.",
+        "hints": [
+            "É um instrumento de planejamento governamental.",
+            "Relaciona receitas previstas e despesas públicas."
+        ],
+        "explanation": "O orçamento público estima receitas e fixa despesas para orientar a aplicação dos recursos públicos durante determinado período, conforme as regras legais."
+    },
+    {
+        "id": 10,
+        "word": "ARRECADACAO",
+        "category": "gestão pública",
+        "context": "O poder público recebe recursos provenientes de tributos e de outras receitas para financiar suas atividades.",
+        "hints": [
+            "Está relacionada à entrada de recursos.",
+            "Pode ocorrer por meio do pagamento de tributos."
+        ],
+        "explanation": "Arrecadação é o recebimento de receitas pelo poder público, incluindo valores provenientes de tributos."
+    },
+    {
+        "id": 11,
+        "word": "GASTO PUBLICO",
+        "category": "gestão pública",
+        "context": "O governo utiliza recursos arrecadados para manter hospitais, escolas, estradas e outros serviços e estruturas públicas.",
+        "hints": [
+            "Representa a utilização de recursos pelo Estado.",
+            "Pode financiar serviços e políticas públicas."
+        ],
+        "explanation": "Gasto público é a aplicação de recursos públicos para custear serviços, manter estruturas governamentais e executar políticas públicas."
+    },
+    {
+        "id": 12,
+        "word": "TRANSPARENCIA",
+        "category": "cidadania",
+        "context": "Um cidadão consulta um portal oficial para descobrir quanto a prefeitura arrecadou e como utilizou o dinheiro público.",
+        "hints": [
+            "Facilita o acesso às informações governamentais.",
+            "Ajuda a população a fiscalizar a administração pública."
+        ],
+        "explanation": "Transparência pública é a divulgação acessível de informações sobre atos, receitas, despesas e decisões da administração pública."
+    },
+    {
+        "id": 13,
+        "word": "CONTROLE SOCIAL",
+        "category": "cidadania",
+        "context": "Moradores acompanham obras municipais, consultam despesas e cobram explicações dos gestores sobre a aplicação dos recursos.",
+        "hints": [
+            "Envolve a participação da sociedade.",
+            "Permite acompanhar e fiscalizar a atuação do poder público."
+        ],
+        "explanation": "Controle social é a participação da sociedade no acompanhamento e na fiscalização da gestão pública e da aplicação dos recursos coletivos."
+    },
+    {
+        "id": 14,
+        "word": "CIDADANIA",
+        "category": "cidadania",
+        "context": "Uma pessoa conhece seus direitos, cumpre seus deveres e participa das decisões que afetam a comunidade.",
+        "hints": [
+            "Envolve direitos e deveres.",
+            "Está relacionada à participação na vida em sociedade."
+        ],
+        "explanation": "Cidadania envolve o exercício de direitos e deveres e a participação das pessoas na sociedade e na vida democrática."
+    },
+    {
+        "id": 15,
+        "word": "JUSTICA FISCAL",
+        "category": "cidadania",
+        "context": "Uma política tributária busca distribuir os encargos de acordo com critérios justos, considerando as diferenças entre os contribuintes.",
+        "hints": [
+            "Está relacionada à equidade na tributação.",
+            "Busca uma distribuição mais justa dos encargos fiscais."
+        ],
+        "explanation": "Justiça fiscal é o princípio de buscar equidade na arrecadação e na distribuição dos encargos tributários, considerando a capacidade contributiva e outros critérios relevantes."
+    },
+    {
+        "id": 16,
+        "word": "SONEGACAO",
+        "category": "irregularidades fiscais",
+        "context": "Uma empresa omite intencionalmente informações tributárias para reduzir ou evitar o pagamento de tributos devidos.",
+        "hints": [
+            "Envolve ocultar informações relevantes do Fisco.",
+            "Pode configurar uma infração ou um crime tributário."
+        ],
+        "explanation": "Sonegação fiscal envolve condutas ilícitas destinadas a ocultar fatos ou informações para suprimir ou reduzir tributos devidos, conforme a legislação aplicável."
+    },
+    {
+        "id": 17,
+        "word": "EVASAO FISCAL",
+        "category": "irregularidades fiscais",
+        "context": "Um contribuinte utiliza meios ilícitos para evitar o pagamento de uma obrigação tributária que deveria cumprir.",
+        "hints": [
+            "Está relacionada à redução ou ao não pagamento ilícito de tributos.",
+            "É diferente do planejamento tributário lícito."
+        ],
+        "explanation": "Evasão fiscal é a utilização de meios ilícitos para evitar, reduzir ou ocultar obrigações tributárias."
+    },
+    {
+        "id": 18,
+        "word": "ELISAO FISCAL",
+        "category": "tributos",
+        "context": "Uma empresa organiza suas atividades dentro dos limites legais para reduzir legitimamente a carga tributária.",
+        "hints": [
+            "Envolve planejamento tributário.",
+            "Diferencia-se da evasão por buscar meios lícitos."
+        ],
+        "explanation": "Elisão fiscal é a busca de uma menor carga tributária por meios juridicamente admitidos, respeitando a legislação aplicável."
+    },
+    {
+        "id": 19,
+        "word": "NOTA FISCAL ELETRONICA",
+        "category": "consumo",
+        "context": "Uma empresa registra uma operação comercial em formato digital e transmite as informações fiscais conforme as regras aplicáveis.",
+        "hints": [
+            "É a versão digital de um documento fiscal.",
+            "Sua sigla mais conhecida é NF-e."
+        ],
+        "explanation": "A Nota Fiscal Eletrônica é um documento fiscal digital emitido e armazenado eletronicamente, utilizado para documentar operações conforme a legislação."
+    },
+    {
+        "id": 20,
+        "word": "SERVICO PUBLICO",
+        "category": "gestão pública",
+        "context": "A população utiliza atividades oferecidas ou organizadas pelo Estado, como atendimento em unidades públicas de saúde e ensino em escolas públicas.",
+        "hints": [
+            "Busca atender necessidades coletivas.",
+            "Pode envolver saúde, educação e outros serviços essenciais."
+        ],
+        "explanation": "Serviço público é uma atividade destinada a atender necessidades da coletividade, prestada pelo Estado ou por particulares autorizados, conforme o regime jurídico aplicável."
     }
 ]
