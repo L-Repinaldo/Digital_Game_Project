@@ -1,5 +1,6 @@
 import Keyboard from "../components/Keyboard";
 import Hangman from "../components/Hangman";
+import GameResultModal from "../components/GameResultModal";
 import useGame from "../hooks/useGame";
 
 export default function GamePage() {
@@ -117,26 +118,10 @@ export default function GamePage() {
             </p>
           )}
 
-          {finished && (
-            <>
-              <section className="result-panel">
-                <h2>{won ? "Você conseguiu!" : "Fim de jogo"}</h2>
-
-                <p>
-                  A resposta era:{" "}
-                  <strong>{game.answer ?? "Não disponível"}</strong>
-                </p>
-
-                <button className="primary-button" onClick={loadGame}>
-                  Jogar novamente
-                </button>
-              </section>
-
-              <section className="explanation-card">
-                <h3>Entenda o conceito</h3>
-                <p>{game.explanation}</p>
-              </section>
-            </>
+          {feedback && !finished && (
+            <p className="feedback" role="status" aria-live="polite">
+              {feedback}
+            </p>
           )}
         </div>
 
@@ -212,6 +197,15 @@ export default function GamePage() {
           </div>
         </aside>
       </section>
+      
+      {finished && (
+          <GameResultModal
+            won={won}
+            answer={game.answer ?? "Não disponível"}
+            explanation={game.explanation}
+            onPlayAgain={loadGame}
+          />
+        )}
 
       <footer className="footer">
         <span>kjdhvyfs</span>
