@@ -1,55 +1,143 @@
 # GDD — Fiscal Forca
 
 **Projeto:** EducaJogo Fiscal  
+**Jogo:** Fiscal Forca  
 **Tipo de documento:** Game Design Document (GDD)  
-**Versão:** 1.0  
+**Versão:** 1.1  
 **Gênero:** Puzzle educativo / jogo de palavras  
 **Plataforma:** Web  
 **Público-alvo:** Estudantes do Ensino Médio  
 **Desenvolvimento:** Individual  
-**Status:** Protótipo funcional em desenvolvimento
+**Status:** Protótipo funcional em desenvolvimento — NP2
 
 ---
 
 ## Índice
 
-1. [Visão geral](#1-visão-geral)
-2. [Objetivos do projeto](#2-objetivos-do-projeto)
+1. [Identificação](#1-identificação)
+2. [Problema educativo](#2-problema-educativo)
 3. [Público-alvo](#3-público-alvo)
-4. [Escopo do jogo](#4-escopo-do-jogo)
-5. [Core Gameplay](#5-core-gameplay)
-6. [Mecânicas de jogo](#6-mecânicas-de-jogo)
-7. [Conteúdo educativo](#7-conteúdo-educativo)
-8. [Interface e experiência do usuário](#8-interface-e-experiência-do-usuário)
-9. [Arquitetura técnica](#9-arquitetura-técnica)
-10. [Regras funcionais](#10-regras-funcionais)
-11. [Requisitos não funcionais](#11-requisitos-não-funcionais)
-12. [Relação entre gameplay e aprendizagem](#12-relação-entre-gameplay-e-aprendizagem)
-13. [Aplicação extensionista](#13-aplicação-extensionista)
-14. [Limitações conhecidas](#14-limitações-conhecidas)
-15. [Possibilidades de evolução](#15-possibilidades-de-evolução)
+4. [Objetivo de aprendizagem](#4-objetivo-de-aprendizagem)
+5. [Conceito do jogo](#5-conceito-do-jogo)
+6. [Gênero e plataforma](#6-gênero-e-plataforma)
+7. [Tecnologia e justificativa técnica](#7-tecnologia-e-justificativa-técnica)
+8. [Core gameplay](#8-core-gameplay)
+9. [Mecânicas principais](#9-mecânicas-principais)
+10. [Objetivos e condições](#10-objetivos-e-condições)
+11. [Feedback ao jogador](#11-feedback-ao-jogador)
+12. [Fluxo de telas/cenas](#12-fluxo-de-telascenas)
+13. [Interface](#13-interface)
+14. [Identidade visual e sonora](#14-identidade-visual-e-sonora)
+15. [Relação gameplay × Educação Fiscal](#15-relação-gameplay--educação-fiscal)
+16. [Referências pesquisadas](#16-referências-pesquisadas)
+17. [Escopo da NP2](#17-escopo-da-np2)
+18. [Divisão de atividades](#18-divisão-de-atividades)
+19. [Uso de IA generativa](#19-uso-de-ia-generativa)
 
 ---
 
-## 1. Visão geral
+## 1. Identificação
 
-### 1.1. Conceito do jogo
+O **Fiscal Forca** é um jogo educativo desenvolvido como parte do projeto **EducaJogo Fiscal**, com a finalidade de abordar conceitos de Educação Fiscal por meio de uma experiência interativa baseada na mecânica clássica da forca.
 
-**Fiscal Forca** é um jogo educativo de palavras baseado na mecânica clássica da forca, desenvolvido com o objetivo de apresentar conceitos de Educação Fiscal de maneira interativa e contextualizada.
+| Informação | Descrição |
+|---|---|
+| Projeto | EducaJogo Fiscal |
+| Nome do jogo | Fiscal Forca |
+| Tipo de documento | Game Design Document (GDD) |
+| Versão | 1.1 |
+| Gênero | Puzzle educativo / jogo de palavras |
+| Plataforma | Web |
+| Público-alvo | Estudantes do Ensino Médio |
+| Desenvolvimento | Individual |
+| Status | Protótipo funcional em desenvolvimento |
 
-Durante uma rodada, o jogador recebe uma situação relacionada à Educação Fiscal e deve descobrir o conceito correspondente selecionando letras de uma palavra oculta. Para auxiliar na resolução, o jogo oferece dicas que podem ser utilizadas em troca de uma vida.
+---
+
+## 2. Problema educativo
+
+A Educação Fiscal envolve a compreensão de conceitos relacionados à tributação, arrecadação, utilização dos recursos públicos, cidadania e participação social.
+
+Entretanto, esses assuntos podem parecer abstratos ou distantes da realidade dos estudantes, especialmente quando apresentados exclusivamente por meio de explicações teóricas e definições técnicas.
+
+O projeto busca trabalhar essa dificuldade por meio de situações cotidianas que permitam relacionar conceitos fiscais a experiências próximas da realidade dos jogadores.
+
+A proposta não é apenas apresentar definições, mas incentivar o reconhecimento dos conceitos e sua relação com situações como:
+
+- A compra de produtos e a emissão de notas fiscais.
+- A arrecadação de tributos.
+- A utilização dos recursos públicos.
+- A prestação de serviços à população.
+- A transparência na administração pública.
+- A participação da sociedade na fiscalização dos gastos públicos.
+
+Dessa forma, o Fiscal Forca procura tornar o contato com a Educação Fiscal mais acessível e participativo, utilizando uma atividade lúdica como instrumento complementar de aprendizagem.
+
+---
+
+## 3. Público-alvo
+
+O público-alvo prioritário são estudantes do Ensino Médio, aproximadamente entre 15 e 18 anos.
+
+A aplicação também poderá ser utilizada em atividades educativas promovidas por instituições de ensino e pelo Núcleo de Apoio Contábil e Fiscal (NAF).
+
+### 3.1. Adequações de linguagem e dificuldade
+
+O conteúdo deverá considerar que os jogadores podem não possuir conhecimento prévio sobre tributação ou administração pública.
+
+Para isso, serão adotadas as seguintes diretrizes:
+
+- Utilizar frases curtas e objetivas.
+- Apresentar situações compreensíveis sem exigir conhecimento tributário prévio.
+- Explicar termos técnicos quando necessário.
+- Evitar ambiguidades que dificultem a identificação da resposta.
+- Manter coerência entre contexto, palavra, dicas e explicação.
+- Utilizar definições educativas compatíveis com o público-alvo e com os conceitos apresentados.
+
+A dificuldade dos desafios será determinada principalmente pela complexidade dos conceitos, pela construção dos contextos e pela especificidade das dicas.
+
+O protótipo não possui níveis de dificuldade formalmente implementados ou adaptação automática da dificuldade.
+
+---
+
+## 4. Objetivo de aprendizagem
+
+Espera-se que, ao interagir com o Fiscal Forca, o jogador desenvolva maior familiaridade com conceitos básicos de Educação Fiscal e consiga relacioná-los a situações do cotidiano.
+
+Os objetivos de aprendizagem são:
+
+- Reconhecer conceitos relacionados à tributação e à arrecadação.
+- Compreender a relação entre tributos e financiamento dos serviços públicos.
+- Identificar a importância da emissão e da utilização de documentos fiscais.
+- Reconhecer a participação da sociedade no acompanhamento da gestão pública.
+- Relacionar conceitos fiscais a situações cotidianas.
+- Refletir sobre a importância da transparência e da cidadania fiscal.
+
+A compreensão dos conceitos não será avaliada exclusivamente pelo acerto da palavra. A explicação apresentada ao final de cada rodada também será parte fundamental da experiência educativa.
+
+---
+
+## 5. Conceito do jogo
+
+**Fiscal Forca** é um jogo educativo de palavras baseado na mecânica clássica da forca, desenvolvido para apresentar conceitos de Educação Fiscal de maneira interativa e contextualizada.
+
+Durante uma rodada, o jogador recebe uma situação relacionada à Educação Fiscal e deve descobrir o conceito correspondente selecionando letras de uma palavra oculta.
+
+Para auxiliar na resolução, o jogo oferece dicas progressivas que podem ser utilizadas em troca de uma vida.
 
 Ao final da rodada, o jogador recebe um feedback explícito de vitória ou derrota, visualiza a resposta correta e tem acesso a uma explicação educativa sobre o conceito apresentado.
 
-O diferencial do jogo está na utilização de contextos cotidianos como parte central da mecânica. O jogador não precisa apenas reconhecer uma palavra: deve relacionar as informações apresentadas a conceitos de tributação, consumo, cidadania e gestão pública.
+### 5.1. Diferencial da proposta
 
-### 1.2. Proposta de valor
+O diferencial do jogo está na utilização de contextos cotidianos como parte central da mecânica.
 
-Transformar conteúdos de Educação Fiscal em desafios curtos e interativos, incentivando a interpretação de situações cotidianas, o reconhecimento de conceitos e a compreensão de sua importância para a sociedade.
+O jogador não precisa apenas reconhecer uma palavra: deve interpretar as informações apresentadas e relacioná-las a conceitos de tributação, consumo, cidadania e gestão pública.
 
-### 1.3. Pilares de design
+Além disso, o sistema de dicas introduz uma decisão durante a partida: o jogador pode obter informações adicionais, mas precisa considerar o custo de uma vida.
 
-- **Aprendizagem contextualizada:** apresentar os conceitos por meio de situações compreensíveis.
+### 5.2. Pilares de design
+
+- **Aprendizagem contextualizada:** apresentar conceitos por meio de situações compreensíveis.
 - **Interatividade:** permitir que o jogador participe ativamente da resolução dos desafios.
 - **Feedback educativo:** explicar o significado do conceito ao final da rodada.
 - **Simplicidade:** oferecer uma interface intuitiva, com regras fáceis de compreender.
@@ -57,83 +145,115 @@ Transformar conteúdos de Educação Fiscal em desafios curtos e interativos, in
 
 ---
 
-## 2. Objetivos do projeto
+## 6. Gênero e plataforma
 
-### 2.1. Objetivo principal
+**Gênero:** Puzzle educativo / jogo de palavras.
 
-Desenvolver um jogo web educativo que auxilie estudantes do Ensino Médio a reconhecer e compreender conceitos básicos de Educação Fiscal por meio de desafios de palavras contextualizados.
+**Plataforma:** Web.
 
-### 2.2. Objetivos específicos
+A experiência é baseada na resolução de desafios individuais, nos quais o jogador precisa descobrir uma palavra ou expressão a partir de um contexto educativo.
 
-- Apresentar conceitos fiscais em situações próximas da realidade dos estudantes.
-- Estimular a interpretação de textos curtos.
-- Relacionar situações cotidianas a conceitos de Educação Fiscal.
-- Incentivar o raciocínio por meio da descoberta progressiva de palavras.
-- Oferecer dicas para auxiliar a resolução dos desafios.
-- Consolidar o aprendizado por meio de explicações apresentadas ao final das rodadas.
-- Disponibilizar uma aplicação simples, executável em um navegador web.
+A aplicação é executada em um navegador web, permitindo sua utilização em computadores e dispositivos com acesso à aplicação.
+
+A escolha desse formato permite disponibilizar o jogo sem exigir a instalação de um aplicativo específico pelo usuário.
 
 ---
 
-## 3. Público-alvo
+## 7. Tecnologia e justificativa técnica
 
-O público-alvo principal são estudantes do Ensino Médio, aproximadamente entre 15 e 18 anos.
+A aplicação utiliza uma arquitetura cliente-servidor, separando a interface do jogo da lógica responsável por processar as rodadas.
 
-O jogo também poderá ser utilizado em atividades educativas promovidas por instituições de ensino e pelo Núcleo de Apoio Contábil e Fiscal (NAF).
+### 7.1. Frontend
 
-### 3.1. Diretrizes de linguagem
+**Tecnologias utilizadas:**
 
-O conteúdo deverá:
+- React.
+- TypeScript.
+- CSS.
+- Vite.
 
-- Utilizar frases curtas e objetivas.
-- Apresentar situações compreensíveis sem exigir conhecimento tributário prévio.
-- Explicar termos técnicos quando necessário.
-- Evitar ambiguidades que dificultem a identificação da resposta.
-- Manter coerência entre o contexto, as dicas, a palavra e a explicação.
-- Utilizar definições educativas compatíveis com os conceitos e com a legislação aplicável.
+**Responsabilidades:**
+
+- Renderizar a interface do jogo.
+- Exibir o contexto e a palavra oculta.
+- Receber os palpites do jogador.
+- Apresentar vidas, dicas e feedback.
+- Controlar os estados visuais da aplicação.
+- Exibir o popup de resultado.
+- Comunicar-se com a API do backend.
+
+**Justificativa técnica:**
+
+O React permite organizar a interface em componentes reutilizáveis e atualizar os elementos visuais conforme o estado da partida é alterado.
+
+O TypeScript contribui para a organização e a tipagem dos dados utilizados na comunicação entre os componentes e a API.
+
+O Vite é utilizado como ferramenta de desenvolvimento e construção da aplicação frontend.
+
+### 7.2. Backend
+
+**Tecnologias utilizadas:**
+
+- Python.
+- Flask.
+
+**Responsabilidades:**
+
+- Disponibilizar os endpoints do jogo.
+- Carregar os conceitos educativos.
+- Selecionar palavras para as rodadas.
+- Validar os palpites.
+- Atualizar as letras descobertas e as tentativas restantes.
+- Processar a utilização de dicas.
+- Verificar as condições de encerramento.
+- Manter o estado da rodada na sessão do jogador.
+- Retornar os dados necessários para a interface.
+
+**Justificativa técnica:**
+
+O Flask foi escolhido por permitir a criação de uma API com estrutura simples e adequada ao escopo do protótipo.
+
+O Python permite implementar e organizar as regras do jogo de maneira direta, enquanto o Flask possibilita disponibilizar essas regras por meio de endpoints HTTP.
+
+### 7.3. Armazenamento de conteúdo e estado
+
+Os conceitos educativos são armazenados em arquivos JSON.
+
+Cada registro contém informações como palavra, categoria, contexto, dicas e explicação.
+
+Essa abordagem permite adicionar ou modificar conteúdos sem precisar alterar a lógica principal do jogo, desde que os registros respeitem o formato esperado pelo carregador.
+
+O estado temporário da rodada é mantido pelo backend por meio de sessões, incluindo:
+
+- Identificador do conceito selecionado.
+- Letras corretas.
+- Letras incorretas.
+- Tentativas restantes.
+- Quantidade de dicas utilizadas.
+
+O protótipo não utiliza, no escopo atual, uma base de dados de usuários ou um histórico permanente de partidas.
+
+### 7.4. Comunicação entre frontend e backend
+
+A comunicação ocorre por meio de uma API HTTP que utiliza JSON.
+
+| Método | Endpoint | Responsabilidade |
+|---|---|---|
+| `GET` | `/api/game/` | Recuperar a rodada ativa ou iniciar uma nova. |
+| `POST` | `/api/game/guess` | Processar um palpite de letra. |
+| `POST` | `/api/game/hint` | Processar a utilização de uma dica. |
+
+A separação permite que as regras da partida sejam processadas no servidor, enquanto o frontend fica responsável pela apresentação e interação com o jogador.
 
 ---
 
-## 4. Escopo do jogo
+## 8. Core gameplay
 
-O Fiscal Forca tem como núcleo a resolução de desafios individuais de palavras.
+O ciclo principal de jogo consiste em interpretar um contexto educativo e descobrir o conceito correspondente por meio da seleção de letras.
 
-### 4.1. Funcionalidades contempladas no protótipo
+O jogador pode utilizar dicas durante a rodada, mas precisa considerar que cada utilização consome uma vida.
 
-- Carregamento de conceitos a partir de uma base de dados.
-- Apresentação de contexto educativo.
-- Exibição de palavra oculta.
-- Seleção de letras por meio de teclado na interface.
-- Identificação de letras corretas e incorretas.
-- Gerenciamento de vidas e tentativas.
-- Sistema de dicas com consumo de vidas.
-- Controle das dicas utilizadas durante a rodada.
-- Verificação das condições de vitória e derrota.
-- Exibição de popup de resultado.
-- Apresentação da resposta correta e da explicação do conceito.
-- Possibilidade de iniciar outra rodada.
-- Comunicação entre frontend e backend por meio de uma API.
-
-### 4.2. Funcionalidades fora do escopo atual
-
-Não fazem parte do escopo funcional atual:
-
-- Sistema de pontuação.
-- Ranking de jogadores.
-- Cadastro e autenticação de usuários.
-- Modo multiplayer.
-- Níveis de dificuldade formalmente definidos.
-- Adaptação automática da dificuldade.
-- Estatísticas históricas de desempenho.
-- Classificação automática dos conceitos por dificuldade.
-
-Essas funcionalidades poderão ser avaliadas futuramente, mas não são necessárias para o funcionamento do protótipo.
-
----
-
-## 5. Core Gameplay
-
-O ciclo principal de jogo é composto pelas seguintes etapas:
+O ciclo é composto pelas seguintes etapas:
 
 1. O jogador inicia ou carrega uma rodada.
 2. O sistema seleciona um conceito disponível.
@@ -147,54 +267,56 @@ O ciclo principal de jogo é composto pelas seguintes etapas:
 10. O resultado é apresentado em um popup.
 11. O jogador pode iniciar uma nova rodada.
 
+### 8.1. Fluxo simplificado
+
 ```text
         Iniciar rodada
               |
               v
-      Exibir contexto
+       Exibir contexto
               |
               v
-       Palavra oculta
+        Palavra oculta
               |
               v
-       Escolher letra
+        Escolher letra
               |
               v
-       Validar palpite
+        Validar palpite
               |
-        +-----+-----+
-        |           |
-      Acerto       Erro
-        |           |
-        v           v
- Revelar letra   Perder vida
-        |           |
-        +-----+-----+
+       +------+------+
+       |             |
+     Acerto         Erro
+       |             |
+       v             v
+  Revelar letra  Perder vida
+       |             |
+       +------+------+
               |
               v
      Verificar resultado
               |
-        +-----+-----+
-        |           |
-      Vitória      Derrota
-        |           |
-        +-----+-----+
+       +------+------+
+       |             |
+     Vitória       Derrota
+       |             |
+       +------+------+
               |
               v
-      Exibir popup
-      e explicação
+       Exibir popup
+       e explicação
               |
               v
-       Próxima rodada
+        Próxima rodada
 ```
 
-O fluxo também permite a utilização de dicas durante a rodada, desde que as condições para seu uso sejam atendidas.
+A utilização de dicas é uma ação alternativa durante a resolução, disponível enquanto as condições de uso forem atendidas.
 
 ---
 
-## 6. Mecânicas de jogo
+## 9. Mecânicas principais
 
-### 6.1. Palavra oculta
+### 9.1. Palavra oculta
 
 Cada rodada possui uma palavra associada ao conceito educativo.
 
@@ -216,7 +338,7 @@ _ R _ _   _ _ _ _ _ _
 
 A rodada termina com vitória quando todas as letras da palavra são descobertas.
 
-### 6.2. Seleção de letras
+### 9.2. Seleção de letras
 
 O jogador utiliza o teclado apresentado na interface para selecionar letras.
 
@@ -229,7 +351,7 @@ Após a seleção:
 
 Os palpites são processados pelo backend, que mantém o estado da rodada.
 
-### 6.3. Sistema de vidas
+### 9.3. Sistema de vidas
 
 O jogador começa cada rodada com a quantidade máxima de tentativas configurada pelo jogo.
 
@@ -245,13 +367,13 @@ Quando as tentativas chegam a zero, o jogador perde a rodada.
 
 O sistema não deverá permitir novos palpites após o encerramento da partida.
 
-### 6.4. Sistema de dicas
+### 9.4. Sistema de dicas
 
 As dicas oferecem informações adicionais para ajudar o jogador a deduzir o conceito.
 
 Cada conceito poderá possuir uma sequência de dicas progressivas. A primeira dica apresenta uma orientação geral, enquanto a segunda pode fornecer uma pista mais específica.
 
-Exemplo:
+**Exemplo:**
 
 **Contexto:** A população acompanha como os recursos públicos são utilizados.
 
@@ -261,7 +383,7 @@ Exemplo:
 
 **Resposta:** CONTROLE SOCIAL.
 
-#### Regras de utilização
+**Regras de utilização:**
 
 - As dicas são específicas de cada conceito.
 - O jogador pode utilizar as dicas disponíveis durante a rodada.
@@ -273,19 +395,101 @@ Exemplo:
 
 As dicas utilizadas e as vidas restantes devem permanecer consistentes durante a continuidade da rodada.
 
-### 6.5. Condições de vitória e derrota
+### 9.5. Categorias temáticas
 
-**Vitória:** ocorre quando todas as letras da palavra são descobertas.
+Os conceitos poderão ser organizados nas seguintes categorias:
 
-**Derrota:** ocorre quando o jogador esgota as tentativas disponíveis.
+**Tributos**
+- Tributo.
+- Imposto.
+- Taxa.
+- IPTU.
+- IPVA.
+- ICMS.
 
-Uma rodada encerrada não deve aceitar novas letras ou dicas.
+**Gestão pública**
+- Orçamento público.
+- Arrecadação.
+- Gasto público.
+- Serviço público.
 
-### 6.6. Popup de resultado
+**Cidadania**
+- Cidadania.
+- Transparência.
+- Controle social.
+- Justiça fiscal.
+
+**Consumo**
+- Nota fiscal.
+- Nota fiscal eletrônica.
+- Consumidor.
+- Fornecedor.
+
+**Irregularidades fiscais**
+- Sonegação.
+- Evasão fiscal.
+- Elisão fiscal.
+
+As categorias servem para organizar os conteúdos. A existência de uma categoria não implica, por si só, a implementação de filtros ou modos de jogo específicos.
+
+---
+
+## 10. Objetivos e condições
+
+O objetivo imediato do jogador é descobrir a palavra correspondente ao contexto educativo antes de esgotar as tentativas disponíveis.
+
+### 10.1. Condição de vitória
+
+A vitória ocorre quando todas as letras da palavra são descobertas.
+
+Ao vencer, o jogador recebe uma indicação visual do resultado e tem acesso à resposta e à explicação educativa.
+
+### 10.2. Condição de derrota
+
+A derrota ocorre quando o jogador esgota as tentativas disponíveis.
+
+Nesse caso, o sistema apresenta a resposta correta e a explicação do conceito, permitindo que o jogador conheça o conteúdo mesmo sem concluir o desafio.
+
+### 10.3. Encerramento da rodada
+
+Uma rodada é encerrada quando uma das condições de vitória ou derrota é atingida.
+
+Após o encerramento:
+
+- Novos palpites não deverão ser aceitos.
+- Novas dicas não deverão ser utilizadas.
+- O resultado deverá ser apresentado ao jogador.
+- A resposta correta deverá ficar disponível.
+- O jogador poderá iniciar outra rodada.
+
+O protótipo não possui um sistema de pontuação, ranking ou progressão por níveis.
+
+---
+
+## 11. Feedback ao jogador
+
+O feedback tem a função de comunicar o resultado das ações e manter o jogador informado sobre o estado da partida.
+
+### 11.1. Feedback durante a rodada
+
+A interface deverá distinguir visualmente:
+
+- Letras corretas.
+- Letras incorretas.
+- Vidas disponíveis.
+- Vidas consumidas.
+- Dicas disponíveis.
+- Dicas utilizadas.
+- Erros de operação.
+- Estados de carregamento.
+
+O resultado de um palpite deverá ser refletido na palavra oculta e no indicador de vidas.
+
+### 11.2. Feedback de vitória e derrota
 
 Ao finalizar uma rodada, o jogo apresenta um popup centralizado sobre a interface.
 
-O popup deverá:
+O componente deverá:
 
 - Destacar visualmente a vitória ou a derrota.
 - Apresentar uma mensagem correspondente ao resultado.
@@ -294,104 +498,86 @@ O popup deverá:
 - Disponibilizar um botão para iniciar outra rodada.
 - Bloquear a interação com os elementos do jogo enquanto estiver aberto.
 
-O popup utiliza a identidade visual do Fiscal Forca, com fundo escuro, destaques em verde para a vitória e detalhes em vermelho para a derrota.
+O popup utiliza a identidade visual do Fiscal Forca, com destaques em verde para a vitória e detalhes em vermelho para a derrota.
 
-O objetivo do componente é tornar o resultado evidente e garantir que a explicação educativa não passe despercebida.
+### 11.3. Feedback educativo
+
+A explicação apresentada ao final da rodada é parte essencial do feedback.
+
+Seu objetivo é reforçar o significado do conceito e relacioná-lo ao contexto apresentado, independentemente de o jogador ter vencido ou perdido.
 
 ---
 
-## 7. Conteúdo educativo
+## 12. Fluxo de telas/cenas
 
-O conteúdo é um dos componentes centrais do jogo. Cada conceito deve possuir informações suficientes para sustentar uma rodada completa.
+O protótipo concentra sua experiência em uma tela principal de jogo e em um popup de resultado.
 
-### 7.1. Estrutura de um conceito
+Não há, no escopo atual, uma estrutura de múltiplas fases, menus de progressão ou telas de perfil de jogador.
 
-Cada registro contém:
+### 12.1. Tela principal do jogo
 
-| Campo | Descrição |
-|---|---|
-| `id` | Identificador único do conceito. |
-| `word` | Palavra ou expressão que o jogador deve descobrir. |
-| `category` | Categoria temática do conceito. |
-| `context` | Situação apresentada ao jogador antes dos palpites. |
-| `hints` | Lista de dicas disponíveis para a rodada. |
-| `explanation` | Explicação apresentada ao final da partida. |
+É o ambiente em que ocorre a interação principal.
 
-### 7.2. Exemplo de conteúdo
+Apresenta:
 
-```json
-{
-    "id": 1,
-    "word": "NOTA FISCAL",
-    "category": "consumo",
-    "context": "Uma pessoa compra um produto e recebe um documento que registra a operação comercial.",
-    "hints": [
-        "Está relacionado ao registro de uma compra.",
-        "Pode ser utilizado para comprovar a operação."
-    ],
-    "explanation": "A nota fiscal é um documento que registra uma operação comercial."
-}
+- Identificação do jogo.
+- Título e instruções.
+- Contexto educativo.
+- Palavra oculta.
+- Teclado de letras.
+- Feedback sobre os palpites.
+- Indicador de vidas.
+- Área de dicas.
+- Botão para utilizar uma dica, quando permitido.
+
+### 12.2. Popup de resultado
+
+É exibido sobre a tela principal quando a rodada termina.
+
+Apresenta:
+
+- Resultado da rodada.
+- Mensagem de vitória ou derrota.
+- Resposta correta.
+- Explicação educativa.
+- Botão para iniciar outra rodada.
+
+### 12.3. Fluxo de navegação
+
+```text
+      Tela principal
+             |
+             v
+       Iniciar rodada
+             |
+             v
+       Jogar rodada
+             |
+             v
+     Vitória ou derrota
+             |
+             v
+      Popup de resultado
+             |
+             v
+       Nova rodada
+             |
+             v
+       Jogar rodada
 ```
 
-### 7.3. Categorias temáticas
-
-Os conceitos poderão ser organizados nas seguintes categorias:
-
-**Tributos**
-- Tributo
-- Imposto
-- Taxa
-- IPTU
-- IPVA
-- ICMS
-
-**Gestão pública**
-- Orçamento público
-- Arrecadação
-- Gasto público
-- Serviço público
-
-**Cidadania**
-- Cidadania
-- Transparência
-- Controle social
-- Justiça fiscal
-
-**Consumo**
-- Nota fiscal
-- Nota fiscal eletrônica
-- Consumidor
-- Fornecedor
-
-**Irregularidades fiscais**
-- Sonegação
-- Evasão fiscal
-- Elisão fiscal
-
-As categorias servem para organizar os conteúdos. A existência de uma categoria não implica, por si só, a implementação de filtros ou modos de jogo específicos.
-
-### 7.4. Critérios de qualidade do conteúdo
-
-Cada conceito deverá ser revisado para garantir:
-
-- Correção conceitual.
-- Clareza do contexto.
-- Coerência entre contexto, palavra e dicas.
-- Ausência de pistas que revelem diretamente a resposta sem necessidade de raciocínio.
-- Explicação compatível com o nível de conhecimento do público-alvo.
-- Consistência com a legislação aplicável, especialmente nos conceitos tributários.
+A ação de iniciar outra rodada retorna o jogador ao fluxo principal, carregando um novo desafio.
 
 ---
 
-## 8. Interface e experiência do usuário
+## 13. Interface
 
-### 8.1. Tela principal do jogo
+A interface principal concentra os elementos necessários para jogar, organizados em duas áreas principais.
 
-A interface principal concentra os elementos necessários para jogar.
+### 13.1. Área de jogo
 
-Os componentes são organizados em duas áreas principais:
+Contém:
 
-**Área de jogo**
 - Identificação do jogo.
 - Título e instruções.
 - Contexto educativo.
@@ -399,7 +585,10 @@ Os componentes são organizados em duas áreas principais:
 - Teclado de letras.
 - Feedback sobre os palpites.
 
-**Barra lateral**
+### 13.2. Barra lateral
+
+Contém:
+
 - Representação visual da forca.
 - Indicador de vidas restantes.
 - Área de dicas.
@@ -407,11 +596,40 @@ Os componentes são organizados em duas áreas principais:
 
 A organização deverá manter as informações relevantes visíveis e reduzir a necessidade de navegação durante uma rodada.
 
-### 8.2. Identidade visual
+### 13.3. Organização responsiva
+
+O jogo deverá se adaptar a diferentes tamanhos de tela.
+
+Em telas menores:
+
+- A área de jogo e a barra lateral poderão ser reorganizadas verticalmente.
+- O teclado deverá manter botões legíveis e utilizáveis.
+- A palavra oculta deverá acomodar expressões maiores.
+- O popup deverá respeitar as dimensões disponíveis e permitir rolagem quando necessário.
+
+### 13.4. Referência da interface
+
+A interface implementada no protótipo é a principal referência visual do projeto.
+
+Caso sejam adicionados wireframes ou capturas de tela ao documento, recomenda-se incluí-los nesta seção, identificando:
+
+1. Tela principal do jogo.
+2. Estado da rodada com letras selecionadas.
+3. Área de dicas.
+4. Popup de vitória.
+5. Popup de derrota.
+
+---
+
+## 14. Identidade visual e sonora
+
+### 14.1. Identidade visual
 
 A interface utiliza uma identidade visual escura, com contrastes e destaques em verde.
 
-Paleta principal:
+A proposta visual busca transmitir uma aparência moderna, manter a legibilidade dos elementos e destacar as informações relevantes durante a partida.
+
+**Paleta principal:**
 
 | Elemento | Cor |
 |---|---|
@@ -425,175 +643,22 @@ Paleta principal:
 | Verde escuro | `#25351d` |
 | Vermelho de erro | `#ff7777` |
 
-A tipografia utiliza DM Sans para o texto geral e Space Grotesk para títulos e elementos de destaque.
+**Tipografia:**
 
-### 8.3. Feedback visual
+- **DM Sans:** utilizada nos textos gerais da interface.
+- **Space Grotesk:** utilizada em títulos e elementos de destaque.
 
-A interface deverá distinguir visualmente:
+### 14.2. Identidade sonora
 
-- Letras corretas.
-- Letras incorretas.
-- Vidas disponíveis.
-- Vidas consumidas.
-- Dicas disponíveis.
-- Erros de operação.
-- Estados de carregamento.
-- Vitória e derrota.
+O protótipo atual não possui uma identidade sonora implementada.
 
-O feedback deve ser claro, consistente e coerente com a paleta de cores.
-
-### 8.4. Responsividade
-
-O jogo deverá se adaptar a diferentes tamanhos de tela.
-
-Em telas menores:
-
-- A área de jogo e a barra lateral poderão ser reorganizadas verticalmente.
-- O teclado deverá manter botões legíveis e utilizáveis.
-- A palavra oculta deverá acomodar expressões maiores.
-- O popup deverá respeitar as dimensões disponíveis e permitir rolagem quando necessário.
+A utilização de efeitos sonoros ou música poderá ser avaliada futuramente, caso contribua para a experiência sem prejudicar a concentração ou a utilização do jogo em ambientes educativos.
 
 ---
 
-## 9. Arquitetura técnica
+## 15. Relação gameplay × Educação Fiscal
 
-A aplicação utiliza uma arquitetura cliente-servidor, separando a interface do jogo da lógica responsável por processar as rodadas.
-
-### 9.1. Frontend
-
-**Tecnologias:**
-- React
-- TypeScript
-- CSS
-- Vite
-
-**Responsabilidades:**
-- Renderizar a interface.
-- Exibir o contexto e a palavra oculta.
-- Receber os palpites do jogador.
-- Apresentar vidas, dicas e feedback.
-- Controlar os estados visuais da aplicação.
-- Exibir o popup de resultado.
-- Comunicar-se com a API do backend.
-
-A lógica de comunicação com a API fica separada dos componentes visuais, enquanto o estado e as ações do jogo são organizados em hooks e módulos próprios.
-
-### 9.2. Backend
-
-**Tecnologias:**
-- Python
-- Flask
-
-**Responsabilidades:**
-- Disponibilizar os endpoints do jogo.
-- Carregar os conceitos educativos.
-- Selecionar palavras para as rodadas.
-- Validar os palpites.
-- Atualizar as letras descobertas e as tentativas restantes.
-- Processar a utilização de dicas.
-- Verificar as condições de encerramento.
-- Manter o estado da rodada na sessão do jogador.
-- Retornar os dados necessários para a interface.
-
-### 9.3. API
-
-A comunicação entre frontend e backend ocorre por meio de endpoints HTTP que utilizam JSON.
-
-Endpoints principais:
-
-| Método | Endpoint | Responsabilidade |
-|---|---|---|
-| `GET` | `/api/game/` | Recuperar a rodada ativa ou iniciar uma nova. |
-| `POST` | `/api/game/guess` | Processar um palpite de letra. |
-| `POST` | `/api/game/hint` | Processar a utilização de uma dica. |
-
-As respostas da API fornecem os dados necessários para atualizar a interface, incluindo a palavra mascarada, as tentativas restantes e as informações educativas pertinentes.
-
-### 9.4. Gerenciamento de estado
-
-O estado da rodada é mantido pelo backend por meio da sessão do jogador.
-
-O frontend mantém uma representação desse estado para renderizar os componentes e atualizar a interface após cada operação.
-
-Essa separação permite que as regras do jogo sejam processadas no servidor, evitando que a interface seja a única responsável por validar os resultados.
-
-### 9.5. Persistência
-
-O protótipo utiliza sessões para manter o estado temporário da rodada, incluindo informações como:
-
-- Identificador do conceito selecionado.
-- Letras corretas.
-- Letras incorretas.
-- Tentativas restantes.
-- Quantidade de dicas utilizadas.
-
-Esse mecanismo permite preservar o progresso durante a continuidade da sessão, conforme o comportamento implementado no backend.
-
-O protótipo não prevê, no escopo atual, uma base de dados de usuários ou um histórico permanente de partidas.
-
-### 9.6. Armazenamento de conteúdo
-
-Os conceitos educativos são armazenados em arquivos JSON.
-
-Essa abordagem permite adicionar, editar ou remover conteúdos sem precisar reescrever a lógica principal do jogo, desde que os registros respeitem o formato esperado pelo carregador.
-
----
-
-## 10. Regras funcionais
-
-As regras abaixo definem o comportamento esperado do jogo.
-
-**RF01 — Inicialização:** o sistema deve disponibilizar uma rodada com contexto, palavra oculta, tentativas e dicas.
-
-**RF02 — Palpites:** o sistema deve receber e validar as letras selecionadas pelo jogador.
-
-**RF03 — Acerto:** quando a letra existir na palavra, suas ocorrências deverão ser reveladas.
-
-**RF04 — Erro:** quando a letra não existir na palavra, uma tentativa deverá ser consumida.
-
-**RF05 — Vitória:** o sistema deverá identificar quando todas as letras forem descobertas.
-
-**RF06 — Derrota:** o sistema deverá identificar quando as tentativas forem esgotadas.
-
-**RF07 — Dicas:** o sistema deverá disponibilizar as dicas cadastradas para o conceito, respeitando os limites de utilização.
-
-**RF08 — Custo da dica:** cada dica utilizada deverá consumir uma tentativa.
-
-**RF09 — Restrição de dicas:** não deverá ser possível utilizar uma dica quando restar apenas uma tentativa.
-
-**RF10 — Encerramento:** uma rodada finalizada não deverá aceitar novos palpites ou dicas.
-
-**RF11 — Resultado:** o sistema deverá informar se o jogador venceu ou perdeu.
-
-**RF12 — Explicação:** a resposta correta e a explicação do conceito deverão ser apresentadas ao final da rodada.
-
-**RF13 — Nova rodada:** o jogador deverá poder iniciar outra rodada após o resultado.
-
-**RF14 — Estado da rodada:** o sistema deverá manter o estado da partida de maneira consistente entre frontend e backend durante a sessão.
-
----
-
-## 11. Requisitos não funcionais
-
-**RNF01 — Usabilidade:** a interface deverá apresentar instruções claras e controles intuitivos.
-
-**RNF02 — Responsividade:** o layout deverá funcionar em diferentes resoluções de tela.
-
-**RNF03 — Manutenibilidade:** a aplicação deverá manter separadas as responsabilidades de interface, comunicação com a API e lógica do jogo.
-
-**RNF04 — Extensibilidade:** novos conceitos deverão poder ser adicionados à base de dados sem alterações estruturais na mecânica principal.
-
-**RNF05 — Consistência:** os dados apresentados na interface deverão refletir o estado retornado pelo backend.
-
-**RNF06 — Desempenho:** as operações de palpites e dicas deverão ocorrer sem atrasos perceptíveis em condições normais de execução.
-
-**RNF07 — Tratamento de erros:** falhas de comunicação e operações inválidas deverão produzir mensagens compreensíveis.
-
-**RNF08 — Acessibilidade básica:** os controles deverão possuir identificação clara, foco visível e feedback perceptível.
-
----
-
-## 12. Relação entre gameplay e aprendizagem
+As mecânicas do Fiscal Forca foram escolhidas para estabelecer uma relação direta entre a resolução dos desafios e o reconhecimento de conceitos de Educação Fiscal.
 
 | Elemento do jogo | Contribuição educativa |
 |---|---|
@@ -602,69 +667,123 @@ As regras abaixo definem o comportamento esperado do jogo.
 | Seleção de letras | Mantém o jogador envolvido na resolução do desafio. |
 | Dicas | Orienta o raciocínio e fornece informações adicionais. |
 | Categorias | Organiza os conceitos por tema. |
+| Sistema de vidas | Introduz consequências para escolhas e tentativas incorretas. |
 | Popup de resultado | Destaca a conclusão da rodada. |
 | Explicação | Reforça o significado do conceito após a resolução. |
 | Nova rodada | Permite contato com outros conceitos educativos. |
 
-A aprendizagem proposta não depende apenas de acertar a palavra. A explicação final é parte fundamental da experiência, pois transforma a resposta em uma oportunidade de compreensão e revisão do conteúdo.
+A aprendizagem proposta não depende apenas de acertar a palavra.
+
+O contexto apresenta uma situação, as dicas fornecem informações adicionais e a descoberta da palavra exige que o jogador relacione essas informações a um conceito.
+
+A explicação final consolida a experiência ao apresentar o significado do termo e sua relação com a Educação Fiscal.
+
+Dessa forma, a mecânica de palavras funciona como meio de interação com o conteúdo, e não apenas como um desafio de adivinhação.
 
 ---
 
-## 13. Aplicação extensionista
+## 16. Referências pesquisadas
 
-O Fiscal Forca poderá ser utilizado em atividades educativas do NAF com estudantes do Ensino Médio, como recurso complementar para introduzir ou revisar conceitos de Educação Fiscal.
+Esta seção deverá reunir as fontes utilizadas para fundamentar os conceitos de Educação Fiscal apresentados no jogo.
 
-### 13.1. Formato sugerido
+As referências devem permitir verificar a correção das informações utilizadas nos contextos, nas dicas e nas explicações educativas.
 
-**Duração:** 15 a 30 minutos.
+Recomenda-se priorizar:
 
-**Equipamento:** computador ou notebook com navegador web.
+- Materiais oficiais de Educação Fiscal.
+- Publicações de órgãos públicos relacionados à administração tributária.
+- Materiais institucionais sobre cidadania e controle social.
+- Legislação e documentos oficiais pertinentes aos conceitos abordados.
+- Materiais didáticos utilizados como apoio na elaboração dos conteúdos.
 
-**Organização:** atividade individual, com possibilidade de discussão coletiva após as rodadas.
+**Referências efetivamente utilizadas:**
 
-### 13.2. Dinâmica proposta
-
-1. O mediador apresenta o objetivo e as regras do jogo.
-2. Os estudantes resolvem as rodadas disponíveis.
-3. Ao final de cada desafio, os participantes leem a explicação do conceito.
-4. O mediador promove uma discussão sobre os conceitos mais difíceis.
-5. Os estudantes relacionam os conceitos a situações cotidianas.
-6. A atividade termina com uma breve revisão dos temas abordados.
-
-O jogo funciona como instrumento de apoio educativo e não substitui a orientação de professores ou mediadores.
+> Inserir nesta seção as referências consultadas durante a elaboração e revisão dos conceitos cadastrados no jogo, preferencialmente seguindo o padrão bibliográfico solicitado pela instituição.
 
 ---
 
-## 14. Limitações conhecidas
+## 17. Escopo da NP2
 
-O protótipo possui um escopo deliberadamente reduzido.
+O escopo da NP2 contempla a implementação e apresentação de um protótipo funcional capaz de executar o ciclo principal do Fiscal Forca.
 
-Entre as limitações estão:
+### 17.1. Funcionalidades contempladas
 
-- Ausência de autenticação de usuários.
-- Ausência de ranking e pontuação.
-- Ausência de histórico permanente de partidas.
-- Ausência de níveis de dificuldade formalmente implementados.
-- Dependência da qualidade e da quantidade de conceitos cadastrados.
-- Necessidade de revisar os conteúdos educativos antes de sua utilização em atividades formais.
-- Dependência da disponibilidade do backend para realizar as operações do jogo.
+- Carregamento de conceitos a partir de arquivos JSON.
+- Apresentação de contexto educativo.
+- Exibição de palavra oculta.
+- Seleção de letras por meio de teclado na interface.
+- Identificação de letras corretas e incorretas.
+- Gerenciamento de vidas e tentativas.
+- Sistema de dicas com consumo de vidas.
+- Controle das dicas utilizadas durante a rodada.
+- Verificação das condições de vitória e derrota.
+- Exibição de popup de resultado.
+- Apresentação da resposta correta e da explicação do conceito.
+- Possibilidade de iniciar outra rodada.
+- Comunicação entre frontend e backend por meio de uma API.
+- Manutenção do estado da rodada por meio de sessões no backend.
 
-Essas limitações não impedem a execução do ciclo principal e poderão orientar evoluções futuras.
+### 17.2. Funcionalidades fora do escopo da NP2
+
+Não fazem parte do escopo funcional atual:
+
+- Sistema de pontuação.
+- Ranking de jogadores.
+- Cadastro e autenticação de usuários.
+- Modo multiplayer.
+- Níveis de dificuldade formalmente definidos.
+- Adaptação automática da dificuldade.
+- Estatísticas históricas de desempenho.
+- Classificação automática dos conceitos por dificuldade.
+- Histórico permanente de partidas.
+
+Essas funcionalidades poderão ser avaliadas em versões futuras, mas não são necessárias para a entrega do protótipo atual.
+
+### 17.3. Critérios de conclusão
+
+O protótipo será considerado funcional para a proposta da NP2 quando:
+
+- O jogador conseguir iniciar uma rodada.
+- O contexto e a palavra oculta forem apresentados corretamente.
+- Os palpites forem processados e refletidos na interface.
+- As vidas forem atualizadas conforme os erros.
+- As dicas puderem ser utilizadas respeitando suas restrições.
+- As condições de vitória e derrota forem identificadas.
+- O resultado apresentar a resposta e a explicação educativa.
+- O jogador conseguir iniciar outra rodada.
+- A comunicação entre frontend e backend ocorrer corretamente.
 
 ---
 
-## 15. Possibilidades de evolução
+## 18. Divisão de atividades
 
-Após a estabilização do protótipo, poderão ser consideradas as seguintes melhorias:
+O desenvolvimento do protótipo é realizado individualmente.
 
-- Criar uma tela inicial com apresentação do projeto e instruções.
-- Implementar filtros por categoria.
-- Desenvolver um sistema de pontuação.
-- Criar níveis de dificuldade definidos manualmente.
-- Adicionar estatísticas da sessão.
-- Ampliar o banco de conceitos.
-- Aprimorar a acessibilidade.
-- Implementar testes automatizados para a API e as regras de jogo.
-- Avaliar formas de registrar resultados de atividades educativas, respeitando os requisitos de privacidade aplicáveis.
+Dessa forma, as responsabilidades de concepção, implementação e documentação estão concentradas no desenvolvedor.
 
-Essas possibilidades não constituem requisitos para a entrega do protótipo atual.
+| Atividade | Responsabilidade |
+|---|---|
+| Concepção do jogo | Lucas Repinaldo |
+| Definição das mecânicas | Lucas Repinaldo |
+| Elaboração e organização dos conceitos | Lucas Repinaldo |
+| Desenvolvimento do frontend | Lucas Repinaldo |
+| Desenvolvimento do backend | Lucas Repinaldo |
+| Implementação da API | Lucas Repinaldo |
+| Desenvolvimento da interface | Lucas Repinaldo |
+| Testes e validação | Lucas Repinaldo |
+| Documentação do projeto | Lucas Repinaldo |
+
+---
+
+## 19. Uso de IA generativa
+
+
+- Ferramenta utilizada: ChatGpt
+- Finalidade da utilização: Correção de bugs, população da base de dados JSON e auxílio no desenvolvimento (especialmente no front).
+- Forma de validação das informações ou sugestões recebidas: Leitura e testes empíricos do código.
+- Adaptações realizadas antes da incorporação ao projeto: Troca do conteúdo gerado para a formatação e estilo adotado durante o desenvolvimento (Seguindo padrões do python no back, como snake case, o equivalente foi feito no front, porém seguindo os padrões do typescript + react).
+
+
+---
+
+**Observação final:** este GDD deverá evoluir junto com o protótipo e refletir o estado efetivamente apresentado na NP2. Funcionalidades planejadas, referências ainda não consultadas e atividades não realizadas não devem ser descritas como concluídas.

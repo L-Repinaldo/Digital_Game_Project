@@ -208,8 +208,8 @@ export default function GamePage() {
         )}
 
       <footer className="footer">
-        <span>kjdhvyfs</span>
-        <span>Aprender também pode ser um desafio.</span>
+        <span>L-Repinaldo</span>
+        <span>Trabalho cadeira de Jogo (2026.2)</span>
       </footer>
     </main>
   );
