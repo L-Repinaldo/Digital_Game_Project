@@ -6,7 +6,7 @@
 **Versão:** 1.1  
 **Gênero:** Puzzle educativo / jogo de palavras  
 **Plataforma:** Web  
-**Público-alvo:** Estudantes do Ensino Médio  
+**Público-alvo:** Calouros de contábeis
 **Desenvolvimento:** Individual  
 **Status:** Protótipo funcional em desenvolvimento — NP2
 
@@ -29,10 +29,9 @@
 13. [Interface](#13-interface)
 14. [Identidade visual e sonora](#14-identidade-visual-e-sonora)
 15. [Relação gameplay × Educação Fiscal](#15-relação-gameplay--educação-fiscal)
-16. [Referências pesquisadas](#16-referências-pesquisadas)
-17. [Escopo da NP2](#17-escopo-da-np2)
-18. [Divisão de atividades](#18-divisão-de-atividades)
-19. [Uso de IA generativa](#19-uso-de-ia-generativa)
+16. [Escopo da NP2](#16-escopo-da-np2)
+17. [Divisão de atividades](#17-divisão-de-atividades)
+18. [Uso de IA generativa](#18-uso-de-ia-generativa)
 
 ---
 
@@ -682,31 +681,11 @@ Dessa forma, a mecânica de palavras funciona como meio de interação com o con
 
 ---
 
-## 16. Referências pesquisadas
-
-Esta seção deverá reunir as fontes utilizadas para fundamentar os conceitos de Educação Fiscal apresentados no jogo.
-
-As referências devem permitir verificar a correção das informações utilizadas nos contextos, nas dicas e nas explicações educativas.
-
-Recomenda-se priorizar:
-
-- Materiais oficiais de Educação Fiscal.
-- Publicações de órgãos públicos relacionados à administração tributária.
-- Materiais institucionais sobre cidadania e controle social.
-- Legislação e documentos oficiais pertinentes aos conceitos abordados.
-- Materiais didáticos utilizados como apoio na elaboração dos conteúdos.
-
-**Referências efetivamente utilizadas:**
-
-> Inserir nesta seção as referências consultadas durante a elaboração e revisão dos conceitos cadastrados no jogo, preferencialmente seguindo o padrão bibliográfico solicitado pela instituição.
-
----
-
-## 17. Escopo da NP2
+## 16. Escopo da NP2
 
 O escopo da NP2 contempla a implementação e apresentação de um protótipo funcional capaz de executar o ciclo principal do Fiscal Forca.
 
-### 17.1. Funcionalidades contempladas
+### 16.1. Funcionalidades contempladas
 
 - Carregamento de conceitos a partir de arquivos JSON.
 - Apresentação de contexto educativo.
@@ -723,7 +702,7 @@ O escopo da NP2 contempla a implementação e apresentação de um protótipo fu
 - Comunicação entre frontend e backend por meio de uma API.
 - Manutenção do estado da rodada por meio de sessões no backend.
 
-### 17.2. Funcionalidades fora do escopo da NP2
+### 16.2. Funcionalidades fora do escopo
 
 Não fazem parte do escopo funcional atual:
 
@@ -739,23 +718,9 @@ Não fazem parte do escopo funcional atual:
 
 Essas funcionalidades poderão ser avaliadas em versões futuras, mas não são necessárias para a entrega do protótipo atual.
 
-### 17.3. Critérios de conclusão
-
-O protótipo será considerado funcional para a proposta da NP2 quando:
-
-- O jogador conseguir iniciar uma rodada.
-- O contexto e a palavra oculta forem apresentados corretamente.
-- Os palpites forem processados e refletidos na interface.
-- As vidas forem atualizadas conforme os erros.
-- As dicas puderem ser utilizadas respeitando suas restrições.
-- As condições de vitória e derrota forem identificadas.
-- O resultado apresentar a resposta e a explicação educativa.
-- O jogador conseguir iniciar outra rodada.
-- A comunicação entre frontend e backend ocorrer corretamente.
-
 ---
 
-## 18. Divisão de atividades
+## 17. Divisão de atividades
 
 O desenvolvimento do protótipo é realizado individualmente.
 
@@ -775,15 +740,12 @@ Dessa forma, as responsabilidades de concepção, implementação e documentaç�
 
 ---
 
-## 19. Uso de IA generativa
+## 18. Uso de IA generativa
 
 
 - Ferramenta utilizada: ChatGpt
 - Finalidade da utilização: Correção de bugs, população da base de dados JSON e auxílio no desenvolvimento (especialmente no front).
 - Forma de validação das informações ou sugestões recebidas: Leitura e testes empíricos do código.
 - Adaptações realizadas antes da incorporação ao projeto: Troca do conteúdo gerado para a formatação e estilo adotado durante o desenvolvimento (Seguindo padrões do python no back, como snake case, o equivalente foi feito no front, porém seguindo os padrões do typescript + react).
-
-
+  
 ---
-
-**Observação final:** este GDD deverá evoluir junto com o protótipo e refletir o estado efetivamente apresentado na NP2. Funcionalidades planejadas, referências ainda não consultadas e atividades não realizadas não devem ser descritas como concluídas.
