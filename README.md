@@ -6,7 +6,7 @@
 **Versão:** 1.1  
 **Gênero:** Puzzle educativo / jogo de palavras  
 **Plataforma:** Web  
-**Público-alvo:** Estudantes do Ensino Médio  
+**Público-alvo:** Calouros de contábeis
 **Desenvolvimento:** Individual  
 **Status:** Protótipo funcional em desenvolvimento — NP2
 
