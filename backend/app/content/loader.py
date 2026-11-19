@@ -4,7 +4,7 @@ from pathlib import Path
 from ..core import WordBank, Word
 
 
-DATA_PATH = Path("data/word.json")
+DATA_PATH = Path(__file__).resolve().parents[2] / "data" / "word.json"
 
 
 def load_words() -> WordBank:

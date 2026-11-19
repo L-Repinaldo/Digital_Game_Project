@@ -2,13 +2,6 @@ from dataclasses import dataclass
 
 
 @dataclass
-class WordBank:
-
-    words: list[Word] 
-
-
-
-@dataclass
 class Word:
     id: int
     word: str
@@ -16,3 +9,9 @@ class Word:
     context: str
     hints: list[str]
     explanation: str
+
+
+@dataclass
+class WordBank:
+
+    words: list[Word] 

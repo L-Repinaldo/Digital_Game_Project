@@ -7,10 +7,7 @@ export default function useGame() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [feedback, setFeedback] = useState("");
-  const [hintsUsed, setHintsUsed] = useState(() => {
-  const salvo = localStorage.getItem('hintsUsed');
-  return salvo ? JSON.parse(salvo) : 0; 
-  });
+  const [hintsUsed, setHintsUsed] = useState(0);
   
 
   const loadGame = useCallback(async () => {
