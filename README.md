@@ -76,7 +76,7 @@ Dessa forma, o Fiscal Forca procura tornar o contato com a Educação Fiscal mai
 
 ## 3. Público-alvo
 
-O público-alvo prioritário são estudantes do Ensino Médio, aproximadamente entre 15 e 18 anos.
+O público-alvo prioritário são estudantes calouros de contábeis.
 
 A aplicação também poderá ser utilizada em atividades educativas promovidas por instituições de ensino e pelo Núcleo de Apoio Contábil e Fiscal (NAF).
 
