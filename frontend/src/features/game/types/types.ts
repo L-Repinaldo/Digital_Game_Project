@@ -1,3 +1,11 @@
+export interface WordEntry {
+  id: number;
+  word: string;
+  category: string;
+  context: string;
+  hints: string[];
+  explanation: string;
+}
 
 export interface GameState {
   context: string;

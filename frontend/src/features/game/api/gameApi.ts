@@ -1,51 +1,46 @@
+import type { GameState, GuessResponse, HintResponse } from "../types/types";
+import { applyGuess, applyHint, hasLost, hasWon, isFinished, maskedWord } from "../logic/gameRules";
+import { currentGame, initializeSession, markCurrentWordCompleted, startNextGame, toPublicGameState } from "../logic/gameSession";
+import { loadWordBank } from "../logic/wordBank";
 
-import type {
-  GameState,
-  GuessResponse,
-  HintResponse,
-} from "../types/types";
+let initialization: Promise<void> | undefined;
 
-const API_URL = "/api";
-
-interface ApiError {
-  error?: string;
-}
-
-async function handleResponse<T>(response: Response): Promise<T> {
-  const data = await response.json();
-
-  if (!response.ok) {
-    const errorData = data as ApiError;
-    throw new Error(errorData.error ?? `Erro HTTP: ${response.status}`);
-  }
-
-  return data as T;
+async function ensureInitialized(): Promise<void> {
+  initialization ??= loadWordBank().then(initializeSession).catch((error: unknown) => {
+    initialization = undefined;
+    throw error;
+  });
+  await initialization;
 }
 
 export async function startGame(): Promise<GameState> {
-  const response = await fetch(`${API_URL}/game/`);
-  return handleResponse<GameState>(response);
+  await ensureInitialized();
+  return toPublicGameState(startNextGame());
 }
 
-export async function guessLetter(
-  letter: string
-): Promise<GuessResponse> {
-  const response = await fetch(`${API_URL}/game/guess`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ letter }),
-  });
+export async function guessLetter(letter: string): Promise<GuessResponse> {
+  const state = currentGame();
+  if (isFinished(state)) throw new Error("Esta partida já terminou.");
+  const correct = applyGuess(state, letter);
+  const won = hasWon(state);
+  const lost = hasLost(state);
+  if (won) markCurrentWordCompleted();
 
-  return handleResponse<GuessResponse>(response);
+  return {
+    correct,
+    word: maskedWord(state),
+    attempts: state.attempts,
+    won,
+    lost,
+    ...(isFinished(state) ? { answer: state.word.word } : {}),
+    hints: state.word.hints,
+    explanation: state.word.explanation,
+  };
 }
 
 export async function consumeHint(): Promise<HintResponse> {
-  const response = await fetch(`${API_URL}/game/hint`, {
-    method: "POST",
-  });
-
-  return handleResponse<HintResponse>(response);
+  const state = currentGame();
+  if (isFinished(state)) throw new Error("A partida já terminou.");
+  const hint = applyHint(state);
+  return { hint, attempts: state.attempts, hints_used: state.hintsUsed };
 }
-2
