@@ -22,9 +22,7 @@ export default function useGame() {
       setHintsUsed(initial.hints_used ?? 0);
     } catch {
       setGame(null);
-      setError(
-        "Não foi possível iniciar o jogo. Verifique se o Flask está ativo."
-      );
+      setError("Não foi possível iniciar o jogo. Verifique a conexão e tente novamente.");
     } finally {
       setLoading(false);
     }
@@ -84,7 +82,7 @@ export default function useGame() {
               : "Essa letra não aparece no conceito."
       );
     } catch {
-      setError("Não foi possível registrar a letra.");
+      setError(error instanceof Error ? error.message : "Não foi possível registrar a letra.");
     }
   };
 
