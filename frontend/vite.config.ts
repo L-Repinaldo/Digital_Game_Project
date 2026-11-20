@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: process.env.GITHUB_PAGES ? "/Digital_Game_Project/" : "/",
+  base: "/Digital_Game_Project/",
 });
