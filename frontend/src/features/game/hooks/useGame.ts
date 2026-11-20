@@ -81,8 +81,12 @@ export default function useGame() {
               ? "Boa! Essa letra faz parte do conceito."
               : "Essa letra não aparece no conceito."
       );
-    } catch {
-      setError(error instanceof Error ? error.message : "Não foi possível registrar a letra.");
+    } catch (err: unknown) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Não foi possível registrar a letra."
+      );
     }
   };
 
